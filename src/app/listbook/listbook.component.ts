@@ -13,7 +13,7 @@ bookList;
     this.loadData();
   }
   loadData() {
-    this.http.get('http://5d11b9d484e90600145764c0.mockapi.io/books')
+    this.http.get('https://5d11b9d484e90600145764c0.mockapi.io/books')
       .toPromise()
       .then((response) => {
         this.bookList = response;
@@ -26,7 +26,7 @@ bookList;
     let result = confirm("Are you sure do you want to delete?");
     if (result == true) {
       console.log(id);
-      this.http.delete(`http://5d11b9d484e90600145764c0.mockapi.io/books/${id}`)
+      this.http.delete(`https://5d11b9d484e90600145764c0.mockapi.io/books/${id}`)
         .toPromise()
         .then((response) => {
           console.log(response);
