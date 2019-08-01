@@ -22,7 +22,7 @@ export class AddbookComponent implements OnInit {
   }
   postBook(){
     console.log(this.bookForm.value);
-    this.http.post('http://5d11b9d484e90600145764c0.mockapi.io/books',this.bookForm.value)
+    this.http.post('https://5d11b9d484e90600145764c0.mockapi.io/books',this.bookForm.value)
     .toPromise()
     .then((response) => {
       console.log(response);

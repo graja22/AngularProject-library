@@ -22,7 +22,7 @@ bookForm;
   ngOnInit() {
     console.log(this.activatedRoute.snapshot.paramMap.get('id'));
 
-    this.http.get(`http://5d11b9d484e90600145764c0.mockapi.io/books/${this.activatedRoute.snapshot.paramMap.get('id')}`)
+    this.http.get(`https://5d11b9d484e90600145764c0.mockapi.io/books/${this.activatedRoute.snapshot.paramMap.get('id')}`)
     .toPromise()
     .then((response:any) => {
       this.bookForm.setValue({
@@ -36,7 +36,7 @@ bookForm;
     })
   }
   postBook(){
-    this.http.put(`http://5d11b9d484e90600145764c0.mockapi.io/books/${this.activatedRoute.snapshot.paramMap.get('id')}`,this.bookForm.value)
+    this.http.put(`https://5d11b9d484e90600145764c0.mockapi.io/books/${this.activatedRoute.snapshot.paramMap.get('id')}`,this.bookForm.value)
     .toPromise()
     .then((response) => {
       console.log(response);
